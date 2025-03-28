@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Jokenpô</string>
+    <string name="jogador_1">Player 1</string>
+    <string name="Resultado">Score</string>
+    <string name="Ganhou">O Player xxx Ganhou!!</string>
+    <string name="button_title">Iniciar Jokenpô</string>
+    <string name="second_screen_title">Jokenpô</string>
+    <string name="menu_save_title">Salvar</string>
+    <string name="menu_settings_title">Reiniciar o jogo</string>
+    <string name="drawer_home_title">Player1</string>
+    <string name="bottom_nav_title_1">Player1</string>
+    <string name="bottom_nav_title_2">Score</string>
+</resources>
