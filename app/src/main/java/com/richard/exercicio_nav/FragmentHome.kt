@@ -17,7 +17,7 @@ class FragmentHome : Fragment() {
         val binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         binding.StartActivityButton.setOnClickListener {
-            val action = FragmentHomeDirections.FragmentHome()
+            val action = FragmentHomeDirections.actionFragmentHomeToNavGame()
             findNavController().navigate(action)
         }
         return binding.root

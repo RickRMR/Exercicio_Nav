@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
-import com.richard.exercicio_nav.R.*
 import com.richard.exercicio_nav.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -22,12 +21,11 @@ class MainActivity : AppCompatActivity() {
     lateinit var navController: NavController
     lateinit var appBarConfiguration: AppBarConfiguration
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar2)
 
@@ -35,14 +33,14 @@ class MainActivity : AppCompatActivity() {
         navDrawer = binding.navView
         bottomNav= binding.bottomNav
 
-        val navHostFragment = supportFragmentManager.findFragmentById(id.fragmentContainerView) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
 
-        appBarConfiguration = AppBarConfiguration(setOf(R.id.playerFragment,R.id.resultFragment), drawer)
-
-        navController.addOnDestinationChangedListener{_, destination , _ ->
+        val appBarConfiguration =
+            AppBarConfiguration(setOf(R.id.fragmentPlayer, R.id.fragmentScore), drawer)
+        navController.addOnDestinationChangedListener{_,destination,_ ->
             when(destination.id){
-                R.id.FragmentHome -> bottomNav.visibility = View.GONE
+                R.id.fragmentHome -> bottomNav.visibility = View.GONE
                 else -> bottomNav.visibility = View.VISIBLE
             }
         }
@@ -50,8 +48,6 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navDrawer.setupWithNavController(navController)
         bottomNav.setupWithNavController(navController)
-
-
 
     }
     override fun onSupportNavigateUp(): Boolean {

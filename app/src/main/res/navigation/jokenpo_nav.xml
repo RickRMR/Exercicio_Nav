@@ -3,30 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/jokenpo_nav"
-    app:startDestination="@layout/fragment_home">
-
+    app:startDestination="@id/fragmentHome">
     <fragment
-        android:id="@id/FragmentHome"
+        android:id="@+id/fragmentHome"
         android:name="com.richard.exercicio_nav.FragmentHome"
-        android:label="Jokenpo"
-        tools:layout="@layout/fragment_score">
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
         <action
-            android:id="@+id/FragmentHome"
-            app:destination="@id/game_nav"
-            app:popUpTo="@layout/fragment_score"
+            android:id="@+id/action_fragmentHome_to_nav_game"
+            app:destination="@id/nav_game"
+            app:popUpTo="@id/nav_game"
             app:popUpToInclusive="false" />
     </fragment>
-    <navigation android:id="@+id/game_nav"
-        app:startDestination="@id/playerFragment">
+    <navigation
+        android:id="@+id/nav_game"
+        app:startDestination="@id/fragmentPlayer">
         <fragment
-            android:id="@+id/playerFragment"
+            android:id="@+id/fragmentPlayer"
             android:name="com.richard.exercicio_nav.FragmentPlayer"
-            android:label="Player"
-            tools:layout="@layout/fragment_score" />
+            android:label="fragment_player"
+            tools:layout="@layout/fragment_player" />
         <fragment
-            android:id="@+id/resultFragment"
+            android:id="@+id/fragmentScore"
             android:name="com.richard.exercicio_nav.FragmentScore"
-            android:label="Result"
+            android:label="fragment_score"
             tools:layout="@layout/fragment_score" />
     </navigation>
 </navigation>

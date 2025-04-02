@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.onNavDestinationSelected
 import com.richard.exercicio_nav.databinding.FragmentPlayerBinding
 
+@Suppress("DEPRECATION")
 class  FragmentPlayer: Fragment() {
     lateinit var root: View
 
