@@ -7,12 +7,12 @@
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.richard.exercicio_nav.FragmentHome"
-        android:label="fragment_home"
+        android:label="Jokenpo"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_fragmentHome_to_nav_game"
             app:destination="@id/nav_game"
-            app:popUpTo="@id/nav_game"
+            app:popUpTo="@id/fragmentHome"
             app:popUpToInclusive="false" />
     </fragment>
     <navigation
@@ -21,12 +21,12 @@
         <fragment
             android:id="@+id/fragmentPlayer"
             android:name="com.richard.exercicio_nav.FragmentPlayer"
-            android:label="fragment_player"
+            android:label="Player"
             tools:layout="@layout/fragment_player" />
         <fragment
             android:id="@+id/fragmentScore"
             android:name="com.richard.exercicio_nav.FragmentScore"
-            android:label="fragment_score"
-            tools:layout="@layout/fragment_score" />
+            android:label="Score"
+            tools:layout="@layout/fragment_score"/>
     </navigation>
 </navigation>

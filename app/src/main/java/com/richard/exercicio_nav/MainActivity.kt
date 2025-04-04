@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
 
-        val appBarConfiguration =
+        appBarConfiguration =
             AppBarConfiguration(setOf(R.id.fragmentPlayer, R.id.fragmentScore), drawer)
         navController.addOnDestinationChangedListener{_,destination,_ ->
             when(destination.id){
