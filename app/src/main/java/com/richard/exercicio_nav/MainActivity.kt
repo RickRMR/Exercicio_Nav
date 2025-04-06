@@ -1,7 +1,9 @@
 package com.richard.exercicio_nav
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -20,11 +22,15 @@ class MainActivity : AppCompatActivity() {
     lateinit var bottomNav: BottomNavigationView
     lateinit var navController: NavController
     lateinit var appBarConfiguration: AppBarConfiguration
+    lateinit var editText : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        Log.d("LifeCycle","onCreate")
+
         val binding = ActivityMainBinding.inflate(layoutInflater)
+        editText = binding.editTextText
 
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar2)
@@ -32,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         drawer = binding.root
         navDrawer = binding.navView
         bottomNav= binding.bottomNav
+
+        savedInstanceState?.getString("editTextValue")?.let {
+            editText.setText(it)
+        }
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
@@ -44,12 +54,33 @@ class MainActivity : AppCompatActivity() {
                 else -> bottomNav.visibility = View.VISIBLE
             }
         }
-
         setupActionBarWithNavController(navController, appBarConfiguration)
         navDrawer.setupWithNavController(navController)
         bottomNav.setupWithNavController(navController)
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        outState.putString("editTextValue", editText.text.toString())
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("LifeCycle","onCreate")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("LifeCycle","onCreate")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("LifeCycle","onCreate")
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }

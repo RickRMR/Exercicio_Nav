@@ -61,4 +61,8 @@ dependencies {
 
 //Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:2.8.8")
+
+    val lifecycle_version =  "2.8.8"
+    implementation("androidx.lifecycle:lifecycle-runtime.ktx: $lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-common-java8: $lifecycle_version")
 }
