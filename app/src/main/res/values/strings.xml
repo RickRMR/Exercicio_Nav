@@ -10,4 +10,11 @@
     <string name="drawer_home_title">Player1</string>
     <string name="bottom_nav_title_1">Player1</string>
     <string name="bottom_nav_title_2">Score</string>
+    <string name="play_selection">Seleção de Jogada</string>
+
+    <string-array name="available_plays_array">
+        <item>Papel</item>
+        <item>Tesoura</item>
+        <item>Pedra</item>
+    </string-array>
 </resources>

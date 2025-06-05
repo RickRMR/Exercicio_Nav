@@ -8,4 +8,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <style name="Base.Theme.Exercicio_Nav.AppOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Base.Theme.Exercicio_Nav.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark"/>
 </resources>

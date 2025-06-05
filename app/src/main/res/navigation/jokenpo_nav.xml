@@ -12,7 +12,7 @@
         <action
             android:id="@+id/action_fragmentHome_to_nav_game"
             app:destination="@id/nav_game"
-            app:popUpTo="@id/fragmentHome"
+            app:popUpTo="@id/jokenpo_nav"
             app:popUpToInclusive="false" />
     </fragment>
     <navigation
