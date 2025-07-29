@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jokenpo_nav"
+    app:startDestination="@id/fragmentHome">
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.richard.exercicio_nav.FragmentHome"
+        android:label="Jokenpo"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragmentHome_to_nav_game"
+            app:destination="@id/nav_game"
+            app:popUpTo="@id/jokenpo_nav"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <navigation
+        android:id="@+id/nav_game"
+        app:startDestination="@id/fragmentPlayer">
+        <fragment
+            android:id="@+id/fragmentPlayer"
+            android:name="com.richard.exercicio_nav.FragmentPlayer"
+            android:label="Player"
+            tools:layout="@layout/fragment_player" />
+        <fragment
+            android:id="@+id/fragmentScore"
+            android:name="com.richard.exercicio_nav.FragmentScore"
+            android:label="Score"
+            tools:layout="@layout/fragment_score"/>
+    </navigation>
+</navigation>

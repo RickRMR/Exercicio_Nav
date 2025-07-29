@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Jokenpo</string>
+    <string name="jogador_1">Player 1</string>
+    <string name="Resultado">Score</string>
+    <string name="Ganhou">O Player xxx Ganhou!!</string>
+    <string name="button_title">Iniciar Jokenpo</string>
+    <string name="second_screen_title">Jokenpo</string>
+    <string name="menu_save_title">Salvar</string>
+    <string name="menu_settings_title">Reiniciar jogo</string>
+    <string name="drawer_home_title">Player1</string>
+    <string name="bottom_nav_title_1">Player1</string>
+    <string name="bottom_nav_title_2">Score</string>
+    <string name="play_selection">Seleção de Jogada</string>
+
+    <string-array name="available_plays_array">
+        <item>Papel</item>
+        <item>Tesoura</item>
+        <item>Pedra</item>
+    </string-array>
+</resources>
